@@ -3,11 +3,72 @@
 
 
 /* Opdracht  1 */
+
+/* Een collectie van docenten */
+
+const docenten = [
+
+    {
+        name: 'Marloes',
+        email: 'marlies@novi-education.nl',
+        school: 'novi',
+    },
+    {
+        name: 'Robbert',
+        email: 'robbert@outlook.com',
+        school: 'novi',
+    },
+    {
+        name: 'Ted',
+        email: 'ted@novi.nl',
+        school: 'novi',
+    },
+
+    {
+        name: 'Marvin',
+        email: 'marvin@outlook.com',
+        school: 'novi',
+    },
+    {
+        name: 'Sanne',
+        email: 'sanne@novi.nl',
+        school: 'novi',
+    },
+    {
+        name: 'Rene',
+        email: 'rene@novi-education.nl',
+        school: 'novi',
+    },
+
+
+];
+
 // Schrijf een functie genaamd getEmailDomain, die een emailadres verwacht en de domeinnaam teruggeeft. Een domeinnaam is hetgeen dat na het @ in het adres staat
 // ---- Verwachte uitkomsten:
 // getEmailDomain("n.eeken@novi-education.nl") geeft novi-education.nl
 // getEmailDomain("t.mellink@novi.nl") geeft novi.nl
 // getEmailDomain("a.wiersma@outlook.com") geeft outlook.com
+
+
+
+
+
+function getEmailDomain(werknemers) {
+
+    for (let i = 0; i < werknemers.length; i++) {
+        const name = werknemers[i].name;
+        const email = werknemers[i].email;
+        const domain = email.split('@')[1];
+        console.log( "naam van werknemer = "+ name + " Met het email domein " + domain);
+    }
+
+}
+
+getEmailDomain(docenten);
+
+
+
+
 
 
 
