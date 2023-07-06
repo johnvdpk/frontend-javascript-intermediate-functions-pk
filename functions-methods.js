@@ -105,8 +105,6 @@ typeOfEmail(docenten);
 
 
 
-
-
 /* Opdracht  3 */
 // Schrijf een functie genaamd checkEmailValidity, die een emailadres verwacht en checkt of het emailadres valide is. De functie returned true of false, afhankelijk van de uitkomst.
 // Een emailadres is valide wanneer:
@@ -119,3 +117,17 @@ typeOfEmail(docenten);
 // checkEmailValidity("n.eekenanovi.nl") geeft false - want geen @
 // checkEmailValidity("n.eeken@novinl.") geeft false - want de punt mag niet als laatst
 // checkEmailValidity("tessmellink@novi,nl") geeft false - want er staat een komma in
+
+
+function checkEmailValidity (werknemers) {
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    for (let i = 0; i < werknemers.length; i++) {
+        const email = werknemers[i].email;
+        const isValid = emailRegex.test(email);
+        console.log(email + ": " + (isValid ? "Geldig" : "Ongeldig"));
+    }
+};
+
+checkEmailValidity(docenten);
