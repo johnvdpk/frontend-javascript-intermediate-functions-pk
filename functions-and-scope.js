@@ -36,9 +36,7 @@ return cumLaude.length;
 
 }
 
-const checkCumLaudeGrades = checkCumLaude(grades);
-console.log(checkCumLaudeGrades);
-
+console.log(checkCumLaude(grades));
 
 // ---- Verwachte uitkomst: 6
 
@@ -55,7 +53,11 @@ console.log(checkCumLaudeGrades);
 // cumLaude([6, 4, 5]) geeft 0
 // cumLaude([8, 9, 4, 6, 10]) geeft 3
 
+const gradesExample01 = [6, 4, 5];
+const gradesExample02 = [8, 9, 4, 6, 10];
 
+console.log(checkCumLaude(gradesExample01));
+console.log(checkCumLaude(gradesExample02));
 
 
 /* Opdracht  2: Gemiddeld cijfer */
@@ -68,6 +70,21 @@ console.log(checkCumLaudeGrades);
 // * Hoe zorgt ik ervoor dat ik alle waardes uit de array kan langslopen, ook als de array wel 100 entries zou bevatten?
 // Log het antwoord in de terminal.
 
+function checkAverageGrade (cijfers) {
+
+    let totalNumberGrades = 0;
+    let totalGrades = cijfers.length;
+        for (let i = 0; i < cijfers.length; i++) {
+           totalNumberGrades += cijfers[i];
+        }
+
+        let averageGrade = totalNumberGrades / totalGrades;
+        return averageGrade.toFixed(2);
+
+}
+
+console.log(checkAverageGrade(grades));
+
 // ---- Verwachte uitkomst: 6.642857142857143
 
 
@@ -75,6 +92,13 @@ console.log(checkCumLaudeGrades);
 // Schrijf een functie genaamd averageGrade, die een array van cijfers verwacht (zoals grades) en het gemiddelde cijfer teruggeeft. Gebruik hiervoor jouw antwoord van 2a.
 // Zorg ervoor dat jouw functie ook werkt als we een andere array willen checken, zoals bijvoorbeeld: [6, 4, 5] of [8, 9, 4, 6, 10].
 // Log het antwoord in de terminal.
+
+averageGrade01 = [6, 4, 5];
+averageGrade02 = [8, 9, 4, 6, 10];
+
+console.log(checkAverageGrade(averageGrade01));
+console.log(checkAverageGrade(averageGrade02));
+
 
 // ---- Verwachte uitkomsten:
 // averageGrade(grades) geeft 6.642857142857143
@@ -86,7 +110,7 @@ console.log(checkCumLaudeGrades);
 // Zorg ervoor dat het gemiddelde cijfer dat wordt teruggegeven uit de functie netjes wordt afgerond op twee decimalen.
 // Tip: Google is your best friend!
 
-
+// methode toFixed() is het wonderbaarlijke middel :-)
 
 
 /* Bonusopdracht: hoogste cijfer */
